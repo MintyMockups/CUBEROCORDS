@@ -1,1 +1,2 @@
-# CUBEROCORDS
+License
+All Rights Reserved. > This software is provided for educational purposes and personal viewing only. No part of this repository may be copied, modified, or distributed without explicit written permission from the author.
