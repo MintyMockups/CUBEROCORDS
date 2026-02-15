@@ -26,9 +26,6 @@
         
         .hidden { display: none !important; }
 
-        /* =========================================
-           ANIMATED RESPONSIVE BACKGROUND
-           ========================================= */
         .orb-container { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; animation: move linear infinite alternate; }
         .orb-1 { width: 50vw; height: 50vw; background: var(--accent); top: -15%; left: -10%; animation-duration: 18s; }
@@ -40,9 +37,6 @@
             100% { transform: translate(2vw, 4vh) scale(0.5) rotate(10deg); }
         }
 
-        /* =========================================
-           NAVIGATION & BRANDING
-           ========================================= */
         nav { 
             display: flex; justify-content: space-between; align-items: center; 
             padding: 15px 8%; background: rgba(0,0,0,0.9); backdrop-filter: blur(20px); 
@@ -58,9 +52,9 @@
             letter-spacing: 1.5px; 
             text-transform: uppercase; 
             margin-top: 4px;
-            font-weight: 400; /* Regular weight for "BY" */
+            font-weight: 400;
         }
-        .sub-branding b { font-weight: 900; } /* Extra Bold for "MINTY MOCKUPS" */
+        .sub-branding b { font-weight: 900; } 
         
         .btn-discord {
             background: var(--discord); color: white; text-decoration: none;
@@ -68,9 +62,6 @@
             display: flex; align-items: center; gap: 8px; transition: 0.3s;
         }
 
-        /* =========================================
-           LANDING PAGE
-           ========================================= */
         #view-home {
             height: 100vh; width: 100%; display: flex; flex-direction: column;
             align-items: center; justify-content: center; text-align: center;
@@ -87,9 +78,6 @@
             text-transform: uppercase; transition: 0.4s;
         }
 
-        /* =========================================
-           FORM STYLING
-           ========================================= */
         .container { padding: 60px 8%; max-width: 900px; margin: 0 auto; }
         .form-container {
             background: var(--card); border: 1px solid rgba(255, 255, 255, 0.08);
@@ -108,7 +96,7 @@
         }
         input:focus { border-color: var(--accent); background: rgba(255,255,255,0.06); }
 
-        /* Dynamic Artist Styling */
+        
         .secondary-artist-entry { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; animation: slideIn 0.3s ease-out; }
         @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
 
@@ -150,15 +138,12 @@
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
-
-    <!-- LANDING -->
     <section id="view-home">
         <h1>CUBE<span>RECORDS</span></h1>
         <p>The Future of Music is Here.</p>
         <button class="btn-enter" onclick="showView('form')">Enter Portal</button>
     </section>
 
-    <!-- SUBMISSION FORM -->
     <div id="view-submission" class="hidden">
         <nav>
             <div class="logo-wrapper" onclick="showView('home')">
@@ -174,7 +159,6 @@
             <h2 style="font-family: 'Outfit'; font-size: 2.5rem; margin-bottom: 40px;">DEMO SUBMISSION</h2>
 
             <div class="form-container">
-                <!-- FORMSPREE ID GOES HERE -->
                 <form action="https://formspree.io/f/mbdaopjz" method="POST">
                     
                     <div class="section-title">Track Details</div>
@@ -184,16 +168,13 @@
                     </div>
 
                     <div class="section-title">Artist DETAILS</div>
-                    <!-- PRIMARY ARTIST (ALWAYS REQUIRED) -->
                     <div class="form-group">
                         <label>Primary Artist</label>
                         <input type="text" name="Primary_Artist" placeholder="Main Artist Name" required>
                     </div>
 
-                    <!-- SECONDARY ARTISTS (DYNAMIC) -->
                     <label>Secondary Artist(s) / Features</label>
                     <div id="secondary-artist-container">
-                        <!-- Dynamic inputs will appear here -->
                     </div>
                     <button type="button" class="btn-add-secondary" onclick="addSecondary()">+ Add Secondary Artist</button>
 
