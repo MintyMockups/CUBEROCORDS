@@ -68,7 +68,7 @@
             padding: 0 10%; position: fixed; top: 0; left: 0; z-index: 5000;
             background: rgba(0,0,0,0.85); backdrop-filter: blur(15px);
         }
-        #view-home h1 { font-family: 'Outfit'; font-size: clamp(3.5rem, 12vw, 7rem); line-height: 0.9; margin-bottom: 15px; letter-spacing: -3px; }
+        #view-home h1 { font-family: 'Outfit'; font-size: clamp(2rem, 10vw, 7rem); line-height: 0.9; margin-bottom: 15px; letter-spacing: -3px; word-break: break-word; }
         #view-home h1 span { color: var(--accent); }
         #view-home p { color: #888; font-size: 1rem; max-width: 600px; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 4px; }
         
@@ -240,12 +240,11 @@
         }
 
         // Basic Security
-        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventLis
+tener('contextmenu', e => e.preventDefault());
         document.onkeydown = function(e) {
             if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))) return false;
         }
     </script>
 </body>
 </html>
-
-
